@@ -11,35 +11,22 @@
       <p>Coloque seu dados para entrar na sua conta</p>
     </header>
     <main>
-      <form action="../backend/login.py" method="post">
-        <p>
-          <label for="inome">Nome: </label>
-          <input type="text" id="inome" name="nome" required>
-        </p>
+      <form action="/login" method="post">
         <p>
           <label for="cpf">CPF</label>
           <input type="text" id="cpf" name="cpf" required>
-        </p>
-        <p>
-          <label for="cidade">Cidade:</label>
-          <input type="text" id="cidade" name="cidade" required>
-        </p>
-        <p>
-          <label for="nascimento">Nascimento</label>
-          <input type="date" id="nascimento" name="nascimento" required>
-        </p>
-        <p>
-          <label for="email">E-Mail</label>
-          <input type="email" id="email" name="email" required>
         </p>
         <p>
           <label for="password">Senha:</label>
           <input type="password" id="password" name="senha" required>
         </p>
         <button type="submit">Login</button>
+        <button type="reset">Limpar</button>
       </form>
-      <a href="/cadastrar">Ainda não tem conta?</a>
-      <a href="/">voltar</a>
+      <nav>
+        <a href="/cadastrar">Ainda não tem conta?</a>
+        <a href="/">voltar</a>
+      </nav>
     </main>
     <footer>
       <p>todos osdireitos reservados @ 2026</p>
