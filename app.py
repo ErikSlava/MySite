@@ -1,15 +1,26 @@
 from flask import Flask, render_template, request
 from servicos.cadastrar import cadastrar
+from servicos.login import login
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET'])
 def login():
     return render_template('login.html')
 
+@app.route('/login', methods=['POST']
+def login_conta():
+    cpf = request.form.get("cpf")
+    senha = request.form.get("senha")
+    sucesso, mensagem = login(cpf, senha)
+    if sucesso:
+        return render_template('sucesso.html)
+                               else:
+                                   
+                                
 @app.route('/cadastro', methods=['GET'])
 def carregar_cadastro():
     return render_template('cadastrar.html')
