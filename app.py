@@ -22,7 +22,7 @@ def processar_cadastro():
     email = request.form.get("email")
     nascimento = request.form.get("nascimento")
     senha = request.form.get("senha")
-    sucesso, mensagem = cadastrar(cpf, nome, email, cidade)
+    sucesso, mensagem = cadastrar(cpf, nome, email, cidade, nascimento, senha)
     if sucesso:
        return render_template('sucesso.html')
     else:
