@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-from servicos.cadastrar import cadastrar
-from servicos.login import login
+from serviços.cadastrar import cadastrar
+from serviços.login import login
 app = Flask(__name__)
 
 @app.route('/')
