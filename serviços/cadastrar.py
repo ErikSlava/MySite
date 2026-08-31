@@ -9,7 +9,7 @@ def validar(cpf, nome, email, cidade, nascimento, senha):
           if usuario["email"]  == email:
              return False, "email ja cadastrado"
 
-       novo_usuario["cpf] = {
+       novo_usuario["cpf"] = {
            "cpf": cpf,
            "nome": nome,
            "email": email,
