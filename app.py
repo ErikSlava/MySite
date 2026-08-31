@@ -20,6 +20,8 @@ def processar_cadastro():
     cpf = request.form.get("cpf")
     cidade = request.form.get("cidade")
     email = request.form.get("email")
+    nascimento = request.form.get("nascimento")
+    senha = request.form.get("senha")
     sucesso, mensagem = validar(cpf, nome, email, cidade)
     if sucesso:
        return render_template('sucesso.html')
