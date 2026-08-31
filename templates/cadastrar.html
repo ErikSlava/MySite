@@ -37,9 +37,14 @@
         </p>
         <button type="submit">cadastrar</button>
         <button type="reset">Limpar</button>
+        {% if error %}
+             <span class="erro">{{ erro }}</span>
+        {% endif %}
       </form>
-      <a href="/login">ja tem conta?</a>
-      <a href="/">Voltar</a>
+      <nav>
+        <a href="/login">ja tem conta?</a>
+        <a href="/">Voltar</a>
+      </nav>
     </main>
     <footer>
       <p>Todos os direitos reservados @ 2026</p>
