@@ -11,7 +11,7 @@ def index():
 def login():
     return render_template('login.html')
 
-@app.route('/login', methods=['POST']
+@app.route('/login', methods=['POST'])
 def login_conta():
     cpf = request.form.get("cpf")
     senha = request.form.get("senha")
