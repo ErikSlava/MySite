@@ -1,7 +1,7 @@
 from core.salvar_carregar import carregar_arq, salvar_dados
 
 arquivo = carregar_arq("../data/usuarios.json")
-def validar(cpf, nome, email, cidade, nascimento, senha):
+def cadastrar(cpf, nome, email, cidade, nascimento, senha):
     try:
        for usuario in arquivos:
           if usuario["cpf"] == cpf:
