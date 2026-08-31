@@ -17,10 +17,9 @@ def login_conta():
     senha = request.form.get("senha")
     sucesso, mensagem = login(cpf, senha)
     if sucesso:
-        return render_template('sucesso.html)
-                               else:
-                                   
-                                
+        return render_template('sucesso.html')
+    else:
+        return render_template('login.html', error=mensagem)                                                               
 @app.route('/cadastro', methods=['GET'])
 def carregar_cadastro():
     return render_template('cadastrar.html')
