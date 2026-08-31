@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from servicos.validar import validar
+from servicos.cadastrar import cadastrar
 app = Flask(__name__)
 
 @app.route('/')
@@ -22,7 +22,7 @@ def processar_cadastro():
     email = request.form.get("email")
     nascimento = request.form.get("nascimento")
     senha = request.form.get("senha")
-    sucesso, mensagem = validar(cpf, nome, email, cidade)
+    sucesso, mensagem = cadastrar(cpf, nome, email, cidade)
     if sucesso:
        return render_template('sucesso.html')
     else:
