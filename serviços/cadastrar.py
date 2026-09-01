@@ -14,8 +14,11 @@ def cadastrar(cpf, nome, email, cidade, nascimento, senha):
            "nome": nome,
            "email": email,
            "cidade": cidade,
+           "tipo": "usuario",
+           "saldo": 1000,
            "nascimento": nascimento,
-           "senha": senha
+           "senha": senha,
+           "ativo": True
         }
        salvar_dados(novo_usuario)
        return True, "usuario cadastrado com sucesso"
