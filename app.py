@@ -8,7 +8,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/login', methods=['GET'])
-def login():
+def login_get():
     return render_template('login.html')
 
 @app.route('/login', methods=['POST'])
@@ -20,7 +20,7 @@ def login_conta():
         return render_template('sucesso.html')
     else:
         return render_template('login.html', error=mensagem)                                                               
-@app.route('/cadastro', methods=['GET'])
+@app.route('/cadastrar', methods=['GET'])
 def carregar_cadastro():
     return render_template('cadastrar.html')
 
