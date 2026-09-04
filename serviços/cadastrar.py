@@ -23,7 +23,7 @@ def cadastrar(cpf, nome, email, cidade, nascimento, senha):
             }
         }
        arquivos.update(novo_usuario)
-       salvar_dados(arquivos)
+       salvar_dados("data/usuarios.json", arquivos)
        return True, "usuario cadastrado com sucesso"
 
     except Exception as e:
