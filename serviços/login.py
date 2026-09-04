@@ -4,7 +4,7 @@ arquivo = carregar_arq("data/usuarios.json")
 def login(cpf, nome):
   try:
     if cpf in arquivo:
-      usuario = arquivo["cpf"]
+      usuario = arquivo[cpf]
       if usuario["senha"] == senha:
         return True, "login bem sucedido"
       else:
