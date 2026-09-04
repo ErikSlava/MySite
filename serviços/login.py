@@ -1,7 +1,7 @@
 from core.salvar_carregar import carregar_arq
 
 arquivo = carregar_arq("data/usuarios.json")
-def login(cpf, nome):
+def login(cpf, cpf):
   try:
     if cpf in arquivo:
       usuario = arquivo[cpf]
